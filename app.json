@@ -1,0 +1,99 @@
+{
+    "name": "Remax Music Bot",
+    "description": "Telegram Group Calls streaming bot with some useful features, written in Python with Pyrogram and Py-Tgcalls. Supporting platforms like Youtube, Spotify, Resso, AppleMusic, Soundcloud and M3u8 Links.",
+    "logo": "https://telegra.ph/file/be59e08410179632a7888.jpg",
+    "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+    "Remax",
+    "RemaxMusicBot",
+    "telegram-bot",
+    "pyrogram"
+    ],
+    "stack": "container",
+    "env": {
+      "API_ID": {
+        "description": "ضـع الايبي ايدي هنا",
+        "value": "",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "ضـع الايبي هاش",
+        "value": "",
+        "required": true
+      },
+      "AUTO_LEAVING_ASSISTANT": {
+        "description": "لا تغيـرها",
+        "value": "True",
+        "required": false
+      },
+      "BOT_TOKEN": {
+        "description": "ضـع توكن البوت الخاص بك هنا",
+        "value": "",
+        "required": true
+      },
+      "MONGO_DB_URI": {
+        "description": "ضـع هنـا الرابـط اللي استخرجتـه مـن المـوقـع https://cloud.mongodb.com .",
+        "value": "",
+        "required": true
+      },
+      "MUSIC_BOT_NAME": {
+        "description": "ضـع اسـم للبـوت وخلي انكـلش سمول",
+        "value": "",
+        "required": true
+      },
+      "OWNER_ID": {
+        "description": "ضع هنا ايديات المطورين . . خلي مسافه بين كل ايدي والثاني",
+        "value": "",
+        "required": true
+      },
+      "STRING_SESSION": {
+        "description": "ضـع كود تيرمكس هنا",
+        "value": "",
+        "required": true
+      },
+      "HEROKU_API_KEY": {
+        "description": "كـــود مفتـــاح هيروكـــو - تروح ع الرابـط » https://dashboard.heroku.com/account  ع آخـر خانـه وتنسـخ الكـود لهنـا",
+        "value": "",
+        "required": false
+      },
+      "HEROKU_APP_NAME": {
+        "description": "اســـم التطبيـــق - نفـس اول مربـع بالقائمـة نسـخ لصـق حـروف انكلـش صغيـره",
+        "value": "",
+        "required": false
+      },
+      "LOG_GROUP_ID": {
+        "description": "ضع ايدي كروب السجل",
+        "value": "",
+        "required": true
+      },
+      "UPSTREAM_REPO": {
+        "description": "لا تغيـرها",
+        "value": "https://github.com/REMAX-SOURCE/RemaxMusicBot",
+        "required": true
+      },
+      "UPSTREAM_BRANCH": {
+        "description": "لا تغيـرها",
+        "value": "master",
+        "required": true
+      }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "formation": {
+          "worker": {
+              "quantity": 1,
+              "size": "free"
+          }
+      }
+  }
