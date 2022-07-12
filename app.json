@@ -1,0 +1,99 @@
+{
+    "name": "Remax Music Bot",
+    "description": "Telegram Group Calls streaming bot with some useful features, written in Python with Pyrogram and Py-Tgcalls. Supporting platforms like Youtube, Spotify, Resso, AppleMusic, Soundcloud and M3u8 Links.",
+    "logo": "https://telegra.ph/file/be59e08410179632a7888.jpg",
+    "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+    "Remax",
+    "RemaxMusicBot",
+    "telegram-bot",
+    "pyrogram"
+    ],
+    "stack": "container",
+    "env": {
+      "API_ID": {
+        "description": "ضـــع كـــود الايبـــي ايـــدي هنـــا",
+        "value": "",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "ضـــع كـــود الايبـــي هـــاش هنـــا",
+        "value": "",
+        "required": true
+      },
+      "AUTO_LEAVING_ASSISTANT": {
+        "description": "لا تغيــرهــا - اتركــهـــا كمـــا هـــي",
+        "value": "True",
+        "required": false
+      },
+      "BOT_TOKEN": {
+        "description": "ضـــع تـــوكـــن البـــوت هنـــا",
+        "value": "",
+        "required": true
+      },
+      "MONGO_DB_URI": {
+        "description": "ضـــع هنـــا الرابـــط اللي استخـــرجتـــه مـن الموقـــع  https://cloud.mongodb.com .",
+        "value": "",
+        "required": true
+      },
+      "MUSIC_BOT_NAME": {
+        "description": "ضـــع اســـم للبـــوت وخلــي انكلـــش حـــروف صغيـــره",
+        "value": "",
+        "required": true
+      },
+      "OWNER_ID": {
+        "description": "ضـــع هنـــا ايديـــات المطـــوريـن . . خلـــي مســـافـه بيـــن كـــل ايـــدي والثـــانـي",
+        "value": "",
+        "required": true
+      },
+      "STRING_SESSION": {
+        "description": "ضـــع كـــود تيـــرمكـــس هنـــا",
+        "value": "",
+        "required": true
+      },
+      "HEROKU_API_KEY": {
+        "description": "كـــود مفتـــاح هيروكـــو - تروح ع الرابـط » https://dashboard.heroku.com/account  ع آخـر خانـه وتنسـخ الكـود لهنـا",
+        "value": "",
+        "required": false
+      },
+      "HEROKU_APP_NAME": {
+        "description": "اســـم التطبيـــق - نفـس اول مربـع بالقائمـة نسـخ لصـق حـروف انكلـش صغيـره",
+        "value": "",
+        "required": false
+      },
+      "LOG_GROUP_ID": {
+        "description": "ضـــع ايـــدي كـــروب السـجـــل مبتـــدأ بالـــرقـم 100-",
+        "value": "",
+        "required": true
+      },
+      "UPSTREAM_REPO": {
+        "description": "لا تغيــرهــا - اتركــهـــا كمـــا هـــي",
+        "value": "https://github.com/REMAX-SOURCE/RemaxMusicBot",
+        "required": true
+      },
+      "UPSTREAM_BRANCH": {
+        "description": "لا تغيــرهــا - اتركــهـــا كمـــا هـــي",
+        "value": "master",
+        "required": true
+      }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "formation": {
+          "worker": {
+              "quantity": 1,
+              "size": "free"
+          }
+      }
+  }
